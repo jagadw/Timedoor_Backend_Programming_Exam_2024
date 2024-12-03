@@ -1,3 +1,38 @@
+Project Test<br><br>
+Scope & Rule<br><br>
+• Please use laravel framework version 10.0<br>
+• Please use PHP version 8.1<br>
+• In this project please provide random of fake example data, you can use faker for<br>
+this one. the data consist of<br><br>
+◦ 1000 fakes author<br>
+◦ 3000 fakes book category<br>
+◦ 100.000 fakes books<br>
+◦ 500.000 fakes rating<br><br>
+• When first time application open in list view, it’s already show the data which you<br>
+provide in the project before hand<br>
+• Don’t use any kind of cache in this test<br>
+• Please use mysql as your database<br>
+• Don’t give us dump mySql database file as data sample<br>
+Questions<br><br>
+Project Name : Please make a simple web example with<br><br>
+specification below<br><br>
+Client story :<br><br>
+John Doe is a client who have a business of bookstore which his main business is to<br>
+rent or sell books.<br>
+He ask our help to recap all of his books collection so he can sort it from the most<br>
+popular ones. So, with this sorted data, he can give his customer best experience in<br>
+giving suggestion what is the best books in store he have based on most popular<br>
+book or most popular author.<br>
+Every time customer come, he will ask them to give rating on the book they buy or<br>
+borrow.<br><br>
+Expected result website ( 3 Pages )<br>
+• List of books with filter<br>
+• Top 10 most famous author<br>
+• Input rating<br><br>
+Notes :<br>
+Voter is count of how many person give rating to books<br>
+The scale of rating is from 1 to 10<br><br><br>
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
