@@ -15,19 +15,27 @@
         <tr>
             <th>No</th>
             <th>Book Name</th>
-            <th>Category Name</th>
             <th>Author Name</th>
+            <th>Category Name</th>
             <th>Average Rating</th>
+            {{-- <th>Price</th>
+            <th>Publisher</th>
+            <th>Released Date</th> --}}
             <th>Voter</th>
         </tr>
+        @foreach ($books as $book)
         <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td>{{ $loop->iteration }}</td>
+            <td>{{ $book->title }}</td>
+            <td>{{ $book->author->name }}</td>
+            <td>{{ $book->id_category }}</td>
+            <td>{{ $book->id_rating }}</td>
+            {{-- <td>{{ $book->price }}</td>
+            <td>{{ $book->publisher }}</td>
+            <td>{{ $book->released_date }}</td> --}}
+            <td>{{ $book->ratings_count }}</td>
         </tr>
+        @endforeach
     </table>
 </body>
 </html>
