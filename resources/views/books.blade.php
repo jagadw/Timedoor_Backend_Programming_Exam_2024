@@ -37,5 +37,10 @@
         </tr>
         @endforeach
     </table>
+
+    <div align="center">
+        {{ $books->links() }}
+    </div>
+
 </body>
 </html>

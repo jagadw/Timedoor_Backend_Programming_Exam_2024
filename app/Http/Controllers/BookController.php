@@ -18,7 +18,7 @@ class BookController extends Controller
         // $books = Books::withCount('ratings')->get();
         // return view('books', ['books' => $books]);
 
-        $books = Books::with('author')->withCount('ratings')->get();
+        $books = Books::with('author')->withCount('ratings')->paginate(10);
         return view('books', compact('books'));
     }
 }
