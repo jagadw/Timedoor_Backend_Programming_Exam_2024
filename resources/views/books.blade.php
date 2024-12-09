@@ -8,9 +8,9 @@
 </head>
 <body>
     <form action="{{ url('books') }}">
-        <p>List shown : <input type="number"></p>
+        <p>List shown : <input type="number" name="paginate"></p>
         <p>Search     : <input type="search" name="search"></p>
-        <p><input type="submit"></p>
+        <p><input type="submit" hidden></p>
     </form>
     <table border="1" align="center">
         <tr>

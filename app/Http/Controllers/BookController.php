@@ -11,8 +11,13 @@ class BookController extends Controller
     public function books(Request $request)
     {
         $search = $request->search;
+
+        if ($num_rows = NULL) {
         $num_rows = 10;
-    
+        } else {
+            $num_rows = $request->paginate;
+        }
+
         if (strlen($search)) {
             $books = Books::where('title', 'like', "%{$search}%")
                 ->with('author', 'category')
