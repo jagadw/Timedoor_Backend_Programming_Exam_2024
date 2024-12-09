@@ -2,7 +2,7 @@
 
 use App\Http\Controllers\BookController;
 use Illuminate\Support\Facades\Route;
-// use App\Http\Controllers\AuthorController;
+use App\Http\Controllers\AuthorController;
 use App\Http\Controllers\RatingController;
 
 /*
@@ -22,3 +22,4 @@ Route::get('/', function () {
 
 Route::get('/books', [BookController::class, 'books']);
 Route::get('/rating', [RatingController::class, 'rating']);
+Route::get('/top_author', [AuthorController::class, 'top_authors']);
