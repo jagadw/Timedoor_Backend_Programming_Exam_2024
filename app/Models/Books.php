@@ -23,6 +23,10 @@ class Books extends Model
         return $this->belongsTo(Authors::class, 'id_author', 'author_id');
     }
 
+    public function category() {
+        return $this->belongsTo(Categories::class, 'id_category', 'category_id');
+    }
+
     public function ratings()
     {
         return $this->hasMany(Ratings::class, 'id_book');

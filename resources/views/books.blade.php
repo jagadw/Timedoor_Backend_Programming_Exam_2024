@@ -7,9 +7,10 @@
     <title>List Of Books</title>
 </head>
 <body>
-    <form action="">
+    <form action="{{ url('books') }}">
         <p>List shown : <input type="number"></p>
-        <p>Search     : <input type="text"></p>
+        <p>Search     : <input type="search" name="search"></p>
+        <p><input type="submit"></p>
     </form>
     <table border="1" align="center">
         <tr>
@@ -28,7 +29,7 @@
             <td>{{ $loop->iteration }}</td>
             <td>{{ $book->title }}</td>
             <td>{{ $book->author->name }}</td>
-            <td>{{ $book->id_category }}</td>
+            <td>{{ $book->category->name }}</td>
             <td>{{ $book->id_rating }}</td>
             {{-- <td>{{ $book->price }}</td>
             <td>{{ $book->publisher }}</td>
