@@ -8,8 +8,30 @@ use App\Models\Books;
 class BookController extends Controller
 {
     //
-    public function books()
+    public function books(Request $request)
     {
+        $search = $request->search;
+
+        if ($num_rows = NULL) {
+        $num_rows = 10;
+        } else {
+            $num_rows = $request->paginate;
+        }
+
+        if (strlen($search)) {
+            $books = Books::where('title', 'like', "%{$search}%")
+                ->with('author', 'category')
+                ->withCount('ratings')
+                ->paginate($num_rows);
+        } else {
+            $books = Books::with('author', 'category')
+                ->withCount('ratings')
+                ->orderBy('id', 'desc')
+                ->paginate($num_rows);
+        }
+    
+        return view('books', compact('books'));
+    }
         // $books = Books::all();
         // return view('books',['books' => $books]);
         // $books = Books::with('author')->get();
@@ -17,8 +39,4 @@ class BookController extends Controller
 
         // $books = Books::withCount('ratings')->get();
         // return view('books', ['books' => $books]);
-
-        $books = Books::with('author')->withCount('ratings')->paginate(10);
-        return view('books', compact('books'));
-    }
 }
