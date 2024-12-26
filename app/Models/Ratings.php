@@ -15,4 +15,14 @@ class Ratings extends Model
         return $this->belongsTo(Books::class, 'id');
 
     }
+
+    public function author()
+    {
+        return $this->belongsTo(Authors::class, 'id_author', 'author_id');
+    }
+
+    public function books() {
+        return $this->belongsTo(Books::class, 'id', 'book_id');
+    }
+
 }
